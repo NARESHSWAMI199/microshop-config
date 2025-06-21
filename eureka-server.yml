@@ -1,4 +1,11 @@
+server:
+  port: 8761
+
 eureka:
+  instance :
+    hostname : localhost
+
+
   client:
-    service-url:
-      defaultZone: http://eureka-server:8761/eureka
+    register-with-eureka: false  # we don't register  eureka service on itself
+    fetch-registry: false # Do not try to download the registry of services from the Eureka server." This means your application won't know about other services registered with Eureka.
