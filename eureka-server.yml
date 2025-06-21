@@ -1,9 +1,9 @@
 server:
   port: 8761
 
-eureka:
-   instance :
-     hostname : localhost
+# eureka:
+#    instance :
+#      hostname : localhost
 
    client:
     register-with-eureka: false  # we don't register  Eureka service with itself
