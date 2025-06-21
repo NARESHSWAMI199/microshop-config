@@ -2,9 +2,9 @@ server:
   port: 8761
 
 eureka:
-  # instance :
-  #   hostname : localhost
-    
-  client:
+   instance :
+     hostname : localhost
+
+   client:
     register-with-eureka: false  # we don't register  Eureka service with itself
     fetch-registry: false # Do not try to download the registry of services from the Eureka server." This means your application won't know about other services registered with Eureka.
