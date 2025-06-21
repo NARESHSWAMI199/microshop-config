@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://db:5432/userdb
+    username: user
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect : org.hibernate.dialect.PostgreSQLDialect
+  application:
+    name: user-service
+server:
+  port: 8081
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka
