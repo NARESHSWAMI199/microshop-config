@@ -3,11 +3,11 @@ spring:
     gateway:
       routes:
         - id: user-service
-          uri: lb://user-service
+          uri: lb://user-service  # here user-service is a container on Docker so that's why we are not using localhost or ip here
           predicates:
             - Path=/users/**
         - id: product-service
-          uri: lb://product-service
+          uri: lb://product-service  # here product-service is a container on ,Docker so that's why we are not using localhost or IP here
           predicates:
             - Path=/products/**
 server:
