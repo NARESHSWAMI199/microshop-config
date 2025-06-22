@@ -1,18 +1,9 @@
-spring:
-  datasource:
-    url: jdbc:postgresql://db:5432/userdb
-    username: user
-    password: password
-  jpa:
-    hibernate:
-      ddl-auto: update
-      dialect : org.hibernate.dialect.PostgreSQLDialect
-  application:
-    name: user-service
-server:
-  port: 8081
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,metrics
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone : http://eureka-server:8761/eureka  
+      #8761 is the default server for the Eureka discovery server
