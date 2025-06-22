@@ -11,4 +11,4 @@ spring:
           predicates:
             - Path=/products/**
 server:
-  port: 8085
+  port: 8080
